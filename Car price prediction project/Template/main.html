@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+    <title>2nd hand Car Price Prediction</title>
+    
+</head>
+<body>
+  <center>
+  <div class="heading"><h1>Car Price Prediction</h1>
+  </div>
+  <div class="ashu">
+  <div class="container">
+    <form action="/predict" method="POST">
+      <label for="year">Year</label>
+      <input type="text" id="year" name="year" placeholder="Year"><br><br>
+
+      <label for="kilometer">Kilometer Driven</label>
+            <input type="text" id="kilometer" name="kilometer" placeholder="Kilometer_Driven"><br><br>
+
+            <label for="owner">Owner_Type</label>
+            <select id="owner" name="owner">
+              <option selected>----select option----</option>
+                <option value="1">First</option>
+                <option value="2">Second</option>
+                <option value="3">Third</option>
+                <option value="4">Fourth & Above</option>
+              </select><br><br>
+              
+            <label for="mileage">Mileage</label>
+            <input type="text" id="mileage" name="mileage" placeholder="Mileage"><br><br>
+            
+            <label for="engine">Engine in cc</label>
+            <input type="text" id="engine" name="engine" placeholder="Engine"><br><br>
+            
+            <label for="power">Power in bhp</label>
+            <input type="text" id="power" name="power" placeholder="Power"><br><br>
+            
+            <label for="location">Location</label>
+            <select id="location" name="location">
+              <option selected>----select option----</option>
+              <option value="0">Chennai</option>
+              <option value="1">Hyderabad</option>
+              <option value="2">Mumbai</option>
+              <option value="3">Kolkata</option>
+              <option value="4">Delhi</option>
+              <option value="5">Bangalore</option>
+            </select><br><br><br>
+            
+            <label for="fuel">Fuel_Type</label>
+            <select id="fuel" name="fuel">
+              <option selected>----select option----</option>
+              <option value="0">Diesel</option>
+              <option value="1">Petrol</option>
+              <option value="2">CNG</option>
+            </select><br><br><br>
+            
+            <label for="transmission">Trasmission</label>
+            <select id="transmission" name="transmission">
+              <option selected>----select option----</option>
+              <option value="0">Manual</option>
+              <option value="1">Automatic</option>
+            </select><br><br><br>
+        
+            <button activate id="btn"value="predict"type="submit">Predict</button>
+            </form>
+      </div>
+      <div class="image">
+        <img src="/static/car_sale.jpg" alt="" >
+      </div>
+    </div>
+    </center>
+</body>
+</html>
